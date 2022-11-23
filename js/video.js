@@ -30,3 +30,12 @@ document.getElementById("faster").onclick = function() {
         alert("Video is at fastest speed!");
     }
 };
+
+document.getElementById("skip").onclick = function() {
+    var targetTime = vid.currentTime + 15;
+    if (targetTime < vid.duration) {
+        vid.currentTime = targetTime;
+    } else {
+        vid.currentTime = 0;
+    }
+};
