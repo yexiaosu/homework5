@@ -14,3 +14,19 @@ document.getElementById("play").onclick = function() {
 document.getElementById("pause").onclick = function() {
     vid.pause();
 };
+
+document.getElementById("slower").onclick = function() {
+    if (vid.playbackRate > 0.5) {
+        vid.playbackRate = vid.playbackRate / 2;
+    } else {
+        alert("Video is at slowest speed!");
+    }
+};
+
+document.getElementById("faster").onclick = function() {
+    if (vid.playbackRate < 2) {
+        vid.playbackRate = vid.playbackRate * 2;
+    } else {
+        alert("Video is at fastest speed!");
+    }
+};
