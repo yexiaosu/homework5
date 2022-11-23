@@ -39,3 +39,12 @@ document.getElementById("skip").onclick = function() {
         vid.currentTime = 0;
     }
 };
+
+document.getElementById("mute").onclick = function() {
+    vid.muted = !vid.muted;
+    if (vid.muted) {
+        this.innerHTML = 'Unmute';
+    } else {
+        this.innerHTML = 'Mute';
+    }
+};
