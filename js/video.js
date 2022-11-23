@@ -5,6 +5,7 @@ window.onload = function () {
   vid.loop = false;
   vid.autoplay = false;
   vid.load();
+  document.getElementById("volume").innerHTML = "100%";
 };
 
 document.getElementById("play").onclick = function() {
@@ -47,4 +48,10 @@ document.getElementById("mute").onclick = function() {
     } else {
         this.innerHTML = 'Mute';
     }
+};
+
+document.getElementById("slider").oninput = function() {
+    var x = this.value;
+    document.getElementById("volume").innerHTML = x + "%";
+    vid.volume = x/100;
 };
